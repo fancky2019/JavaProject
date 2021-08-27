@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+    <!--	设置父-->
+    <parent>
+		<groupId>com.example</groupId>
+		<artifactId>fancky-test</artifactId>
+		<version>0.0.3-SNAPSHOT</version>
+<!--       <relativePath>../pom.xml</relativePath>-->
+<!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+
+	</parent>
+
+    <!--只保留AV-->
+    <artifactId>fancky-test-web</artifactId>
+	<version>0.0.3-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+		   <dependency>
+			   <groupId>com.example</groupId>
+			   <artifactId>fancky-test-service</artifactId>
+			   <version>0.0.3-SNAPSHOT</version>
+          </dependency>
+		 <dependency>
+			   <groupId>com.example</groupId>
+			   <artifactId>fancky-test-model</artifactId>
+			 <version>0.0.3-SNAPSHOT</version>
+          </dependency>
+		 <dependency>
+			   <groupId>com.example</groupId>
+			   <artifactId>fancky-test-common</artifactId>
+			 <version>0.0.3-SNAPSHOT</version>
+          </dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+<!--			不能移到父pom-->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				 <version>2.5.4</version>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
